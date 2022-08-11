@@ -7,6 +7,7 @@ class UsersController {
     const listUsers = new ListUsersService();
     const users = await listUsers.execute();
 
+    console.log(request.user.id);
     return response.json(users);
   }
 
